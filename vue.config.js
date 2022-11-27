@@ -13,8 +13,8 @@ module.exports = {
     }
   },
   devServer: {
-    onBeforeSetupMiddleware (app) {
-      registerRouter(app.app)
+    before(app) {
+      registerRouter(app)
     }
   },
   configureWebpack: (config) => {
